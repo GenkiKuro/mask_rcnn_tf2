@@ -19,20 +19,22 @@ from pycocotools import mask as maskUtils
 
 
 # Root directory of the project
-ROOT_DIR = os.path.abspath("/tmp/mask_rcnn/Mask_RCNN-TF2")
+# /tmp/mask_rcnn/Mask_RCNN-TF2
+ROOT_DIR = os.path.abspath("/kaggle/input/mask-rcnn")
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
 
-dataset_dir_train = '/tmp/mask_rcnn/coco/annotations-v2'
-dataset_dir_val = '/tmp/mask_rcnn/coco/annotations-val'
+# /tmp/coco
+dataset_dir_train = '/tmp/coco/annotations-v2'
+dataset_dir_val = '/tmp/coco/annotations-val'
 from mrcnn.config import Config
 from mrcnn import model as modellib, utils
 
 # import tensorflow as tf
 
 # Path to trained weights file
-COCO_MODEL_PATH  = os.path.join('/tmp/mask_rcnn/coco/', "mask_rcnn_coco.h5")
+COCO_MODEL_PATH  = os.path.join('/tmp/coco/', "mask_rcnn_coco.h5")
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
