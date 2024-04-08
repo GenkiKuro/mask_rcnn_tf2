@@ -20,7 +20,7 @@ from pycocotools import mask as maskUtils
 
 # Root directory of the project
 # /tmp/mask_rcnn/Mask_RCNN-TF2
-ROOT_DIR = os.path.abspath("/kaggle/input/mask-rcnn")
+ROOT_DIR = os.path.abspath("/kaggle/working/mask-rcnn")
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
